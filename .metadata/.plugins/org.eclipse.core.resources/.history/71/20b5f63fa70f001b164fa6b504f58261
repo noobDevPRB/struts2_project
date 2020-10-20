@@ -1,0 +1,56 @@
+package model.bean;
+
+public class Paciente {
+
+	private int id;
+	private String nm_cmplt;
+	private int idade;
+	private String genero;
+
+	public Paciente() {
+		super();
+
+	}
+
+	public Paciente(int id, String nm_cmplt, int idade, String genero
+			) {
+		super();
+		this.id = id;
+		this.nm_cmplt = nm_cmplt;
+		this.idade = idade;
+		this.genero = genero;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNm_cmplt() {
+		return nm_cmplt;
+	}
+
+	public void setNm_cmplt(String nm_cmplt) {
+		this.nm_cmplt = nm_cmplt;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+	
+}

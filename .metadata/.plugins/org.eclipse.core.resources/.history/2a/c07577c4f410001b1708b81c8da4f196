@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+	<title>Soc Teste</title>
+</head>
+<body>
+
+	<%@ include file="navBar.jsp"%>
+	
+	<div class="container custon-transley">
+		<div class="row justify-content-md-center pb-5">
+			<h4>Cadastro de Paciente</h4>
+		</div>
+		
+	  	<div class="row justify-content-md-center">
+		    <div class="col-lg-6 align-item">			
+				<form action="cadastrarConsulta"method="post">
+				
+					<div class="form-group">
+						<label>Nome do Exame</label>
+						<input class="form-control" type="text" required="required" maxlength="40" placeholder="Nome do exame" name="exame.nm_exame">		    	    
+					</div>
+					
+					 <div class="form-group">
+						<label>Código do Paciente</label>
+						<input class="form-control" type="number" required="required" placeholder="Código do paciente" name="paciente.idade">
+					</div>
+					<div class="form-group">
+						<label>Data do Exame</label>
+						<input type="date" required="required" placeholder="Data" name="consulta.dataConsulta">
+					</div>
+					
+					<div class="form-group">
+						<label>Relatório do Exame</label>
+						<input class="form-control" type="text" maxlength="40" placeholder="digite seu nome" name="paciente.nm_cmplt">		    	    
+					</div>
+						 
+					<div class="pt-3 row justify-content-md-center">
+						<button type="submit" class="btn btn-primary px-5" value="Cadastrar">Submit</button>
+					</div>
+				</form>
+		    </div>
+	  	</div>
+	</div>	
+</body>
+</html>

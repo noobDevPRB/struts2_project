@@ -1,0 +1,97 @@
+package controller.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.bean.Exame;
+import model.business.ExameBusiness;
+
+public class ExameAction extends MainAction{
+
+	Exame exame = new Exame();	
+	List<Exame> listaExamesForm = new ArrayList<Exame>();
+	
+//	public String cadastrar() {
+//			
+//		if(exame.getNmExame()!= null && exame.getTipoExame() != null && exame.getDescExame() != null) {
+//			
+//			ExameBusiness exameBusiness = new ExameBusiness(); 
+//			
+//			return exameBusiness.cadastrarExame(exame);
+//			}else {
+//				return "failur";
+//			}
+//		}
+	
+	public String listar() {
+		ExameBusiness exameBusiness = new ExameBusiness();
+
+		for(Exame exame : exameBusiness.listar()) {
+
+			Exame exameParaLista = new Exame();
+
+			exameParaLista.setId(exame.getId());
+			exameParaLista.setNm_exame(exame.getNm_exame());
+			exameParaLista.setExm_data(exame.getExm_data());
+			exameParaLista.setExamePaciente(exame.getExamePaciente());
+
+			listaExamesForm.add(exameParaLista);
+		}
+			return "success";
+	}
+	
+//	public String detalharExame() {
+//		ExameBusiness exameBusiness = new ExameBusiness();
+//		
+//		exame = exameBusiness.detalharExame(exame.getCdExame());
+//		
+//		return "success";
+//	}
+//	
+//	public String atualizarExame() {
+//		
+//		if(exame.getNmExame()!= null && exame.getTipoExame() != null && exame.getDescExame() != null) {
+//		
+//			ExameBusiness exameBusiness = new ExameBusiness();
+//		
+//			exameBusiness.atualizarExame(exame);
+//		
+//			return "success";
+//		}else {
+//			return "failure";
+//		}
+//		
+//	}
+//	
+//	public String deletarExame() {
+//		ExameBusiness exameBusiness = new ExameBusiness();
+//		
+//		return exameBusiness.deletarExame(exame.getCdExame());
+//	}
+	
+	//Navegação
+	public String navegarCadastroDeExame() {
+		
+		
+		return "success";	
+	}
+	
+	//Getters & Setters
+	public Exame getExame() {
+		return exame;
+	}
+	
+	public void setExame(Exame exame) {
+		this.exame = exame;
+	}
+	
+	public List<Exame> getListaExamesForm() {
+		return listaExamesForm;
+	}
+
+	public void setListaExamesForm(List<Exame> listaExamesForm) {
+		this.listaExamesForm = listaExamesForm;
+	}
+
+
+}

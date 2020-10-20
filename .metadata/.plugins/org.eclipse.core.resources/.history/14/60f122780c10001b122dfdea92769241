@@ -1,0 +1,159 @@
+package model.bean;
+
+public class Exame {
+	
+	private int cdExame;
+	private String nmExame;
+	private String tipoExame;
+	private String descExame;
+	private String qstUm;
+	private String qstDois;
+	private String qstTres;
+	private String qstQuatro;
+	private String qstCinco;
+	private String qstSeis;
+	private String qstSete;
+	private String qstOito;
+	private String qstNove;
+	private String qstDez;
+	
+	public Exame() {
+		super();
+		
+	}
+
+	public Exame(int cdExame, String nmExame, String tipoExame, String descExame, String qstUm, String qstDois,
+			String qstTres, String qstQuatro, String qstCinco, String qstSeis, String qstSete, String qstOito,
+			String qstNove, String qstDez) {
+		super();
+		this.cdExame = cdExame;
+		this.nmExame = nmExame;
+		this.tipoExame = tipoExame;
+		this.descExame = descExame;
+		this.qstUm = qstUm;
+		this.qstDois = qstDois;
+		this.qstTres = qstTres;
+		this.qstQuatro = qstQuatro;
+		this.qstCinco = qstCinco;
+		this.qstSeis = qstSeis;
+		this.qstSete = qstSete;
+		this.qstOito = qstOito;
+		this.qstNove = qstNove;
+		this.qstDez = qstDez;
+	
+	}
+
+	public int getCdExame() {
+		return cdExame;
+	}
+
+	public void setCdExame(int cdExame) {
+		this.cdExame = cdExame;
+	}
+
+	public String getNmExame() {
+		return nmExame;
+	}
+
+	public void setNmExame(String nmExame) {
+		this.nmExame = nmExame;
+	}
+
+	public String getTipoExame() {
+		return tipoExame;
+	}
+
+	public void setTipoExame(String tipoExame) {
+		this.tipoExame = tipoExame;
+	}
+
+	public String getDescExame() {
+		return descExame;
+	}
+
+	public void setDescExame(String descExame) {
+		this.descExame = descExame;
+	}
+
+	public String getQstUm() {
+		return qstUm;
+	}
+
+	public void setQstUm(String qstUm) {
+		this.qstUm = qstUm;
+	}
+
+	public String getQstDois() {
+		return qstDois;
+	}
+
+	public void setQstDois(String qstDois) {
+		this.qstDois = qstDois;
+	}
+
+	public String getQstTres() {
+		return qstTres;
+	}
+
+	public void setQstTres(String qstTres) {
+		this.qstTres = qstTres;
+	}
+
+	public String getQstQuatro() {
+		return qstQuatro;
+	}
+
+	public void setQstQuatro(String qstQuatro) {
+		this.qstQuatro = qstQuatro;
+	}
+
+	public String getQstCinco() {
+		return qstCinco;
+	}
+
+	public void setQstCinco(String qstCinco) {
+		this.qstCinco = qstCinco;
+	}
+
+	public String getQstSeis() {
+		return qstSeis;
+	}
+
+	public void setQstSeis(String qstSeis) {
+		this.qstSeis = qstSeis;
+	}
+
+	public String getQstSete() {
+		return qstSete;
+	}
+
+	public void setQstSete(String qstSete) {
+		this.qstSete = qstSete;
+	}
+
+	public String getQstOito() {
+		return qstOito;
+	}
+
+	public void setQstOito(String qstOito) {
+		this.qstOito = qstOito;
+	}
+
+	public String getQstNove() {
+		return qstNove;
+	}
+
+	public void setQstNove(String qstNove) {
+		this.qstNove = qstNove;
+	}
+
+	public String getQstDez() {
+		return qstDez;
+	}
+
+	public void setQstDez(String qstDez) {
+		this.qstDez = qstDez;
+	}
+
+	
+}

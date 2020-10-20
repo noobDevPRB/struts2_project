@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	
+	<title>Soc Teste</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand pl-5 ml-5" href="http://localhost:8080/Projeto_SOCTest/">Home</a>
+	
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto pr-5 mr-5">  
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Paciente
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/cadastrarPaciente">Cadastro</a>
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/listarPaciente">Listagem</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Exame
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/cadastrarExames">Cadastro</a>
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/listarExames">Listagem</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm px-5 mx-5">
+				<form class="px-5 mx-5">
+					<div class="form-group px-5 mx-5">
+						<label for="formGroupExampleInput">Nome Completo</label>
+						<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+					</div>
+					<div class="form-group px-5 mx-5">
+						<label for="formGroupExampleInput2">idade</label>
+						<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+					</div>
+					<div class="form-group px-5 mx-5">
+						<label for="exampleFormControlSelect2">Genêro</label>
+						<select multiple class="form-control" id="exampleFormControlSelect2">
+						<option>Masculino</option>
+						<option>Feminino</option>
+						<option>Outro</option>
+						</select>
+					</div>
+				</form>
+			</div>    
+		</div>
+	</div>
+
+   <!-- Bootstrap Scripts -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+//*MODAL DELETAR
+function iniciarModalDeletar(codigoConsulta) {
+	window.location.href = "#abrirModal";
+	document.getElementById(`deletarConsultaModal`).value = codigoConsulta;
+}
+
+function deletarConsulta() {
+	var codigoConsulta = document.getElementById(`deletarConsultaModal`).value;
+	window.location.href = `deletarConsulta?consulta.codConsulta=` + codigoConsulta;
+}

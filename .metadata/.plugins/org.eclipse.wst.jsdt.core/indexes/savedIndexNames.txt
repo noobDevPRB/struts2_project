@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+C:\Users\bruno\Desktop\Nova pasta\Test_AGE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1952121163.index
+3422197439.index
+3600123555.index
+3190313914.index

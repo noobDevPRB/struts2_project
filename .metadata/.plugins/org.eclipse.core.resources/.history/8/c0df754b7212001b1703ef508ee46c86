@@ -1,0 +1,14 @@
+package agews;
+
+import model.bean.Exame;
+import model.business.ExameBusiness;
+
+public class ExameWs {
+	ExameBusiness exameBusiness = new ExameBusiness();
+	
+	public String consultaPorId(String paramId) {
+		int id = Integer.parseInt(paramId);
+		Exame examePorId = exameBusiness.getExamePorId(id);
+		return examePorId.getNm_exame();
+	}
+}

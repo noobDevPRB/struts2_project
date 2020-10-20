@@ -1,0 +1,78 @@
+package model.bean;
+
+public class Paciente {
+	
+	private int codPaciente;
+	private String nmPaciente;
+	private String sbPaciente;
+	private String sexo;
+	private String dataNcmt;
+	private int codRg;
+	
+	public Paciente() {
+		super();
+		
+	}
+
+	public Paciente(int codPaciente, String nmPaciente, String sbPaciente, String sexo, String dataNcmt, int codRg
+			) {
+		super();
+		this.codPaciente = codPaciente;
+		this.nmPaciente = nmPaciente;
+		this.sbPaciente = sbPaciente;
+		this.sexo = sexo;
+		this.dataNcmt = dataNcmt;
+		this.codRg = codRg;
+		
+	}
+
+	public int getCodPaciente() {
+		return codPaciente;
+	}
+
+	public void setCodPaciente(int codPaciente) {
+		this.codPaciente = codPaciente;
+	}
+
+	public String getNmPaciente() {
+		return nmPaciente;
+	}
+
+	public void setNmPaciente(String nmPaciente) {
+		this.nmPaciente = nmPaciente;
+	}
+
+	public String getSbPaciente() {
+		return sbPaciente;
+	}
+
+	public void setSbPaciente(String sbPaciente) {
+		this.sbPaciente = sbPaciente;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getDataNcmt() {
+		return dataNcmt;
+	}
+
+	public void setDataNcmt(String dataNcmt) {
+		this.dataNcmt = dataNcmt;
+	}
+
+	public int getCodRg() {
+		return codRg;
+	}
+
+	public void setCodRg(int codRg) {
+		this.codRg = codRg;
+	}
+
+
+}

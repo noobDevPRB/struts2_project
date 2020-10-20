@@ -1,0 +1,40 @@
+package model.business;
+
+import java.util.List;
+import model.dao.PacienteDao;
+import model.bean.Paciente;
+
+public class PacienteBusiness {
+	
+	public String cadastrar(Paciente paciente) {
+		PacienteDao pacienteDao = new PacienteDao();
+		return pacienteDao.cadastrar(paciente);
+	}
+	
+	public List<Paciente> listar() {
+		PacienteDao pacienteDao = new PacienteDao();
+		return pacienteDao.listar();
+	}
+	
+	public Paciente detalharPaciente(int codigo) {
+		
+		PacienteDAO pacienteDao = new PacienteDAO();
+			
+		return pacienteDao.detalharPaciente(codigo);
+	}
+//	
+//	public String atualizarPaciente(Paciente paciente) {
+//		
+//		PacienteDAO pacienteDao = new PacienteDAO();
+//		
+//		return pacienteDao.atualizarPaciente(paciente);		
+//	}
+//	
+//	public String deletarPaciente(int codigo) {
+//		
+//		PacienteDAO pacienteDao = new PacienteDAO();
+//		
+//		return pacienteDao.deletarPaciente(codigo);
+//	}
+
+}

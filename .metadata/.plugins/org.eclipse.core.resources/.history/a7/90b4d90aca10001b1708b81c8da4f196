@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="paciente" extends="struts-default">
+	
+		<action name="navegarCadastroPaciente" class="controller.action.PacienteAction" method="navegarCadastro">
+			<result name="success">/WEB-INF/jsp/paciente/cadastro.jsp</result>			
+		</action>
+		
+		<action name="navegarListagemPacientes" class="controller.action.PacienteAction" method="listar">
+			<result name="success">/WEB-INF/jsp/paciente/lista.jsp</result>
+			<result name="failure">index.jsp</result>
+		</action>
+		
+		<action name="cadastrarPaciente" class="controller.action.PacienteAction" method="cadastrar">
+			<result name="success">/WEB-INF/jsp/paciente/cadastro.jsp</result>
+			<result name="failure">index.jsp</result>
+		</action>
+			
+	</package>
+	
+	<package name="exame" extends="struts-default">
+		<action name="navegarListagemExames" class="controller.action.ExameAction" method="listar">
+			<result name="success">/WEB-INF/jsp/exame/lista.jsp</result>
+			<result name="failure">/WEB-INF/jsp/index.jsp</result>
+		</action>
+	</package>
+
+
+</struts>

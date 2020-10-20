@@ -1,0 +1,90 @@
+package controller.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.bean.Paciente;
+import model.business.PacienteBusiness;
+
+public class PacienteAction extends MainAction {
+
+	Paciente paciente = new Paciente();	
+	List<Paciente> listaPacientesForm = new ArrayList<Paciente>();
+	
+	public String cadastrarPaciente() {
+			if(paciente.getID() != 0) {
+				PacienteBusiness pacienteBusiness = new PacienteBusiness(); 
+				return pacienteBusiness.cadastrarPaciente(paciente);
+			}else {
+				return "failure";
+			}
+		}
+	
+	public String listarPacientes() {
+		PacienteBusiness pacienteBusiness = new PacienteBusiness();	
+		
+		for(Paciente paciente : pacienteBusiness.listarPacientes()) {
+			
+			Paciente pacienteListar = new Paciente();
+			
+			pacienteListar.setCodPaciente(paciente.getCodPaciente());
+			pacienteListar.setNmPaciente(paciente.getNmPaciente());
+			pacienteListar.setSbPaciente(paciente.getSbPaciente());
+			pacienteListar.setSexo(paciente.getSexo());
+			pacienteListar.setDataNcmt(paciente.getDataNcmt());
+			pacienteListar.setCodRg(paciente.getCodRg());
+			
+			listaPacientesForm.add(pacienteListar);	
+		}
+			return "success";
+	}
+	
+	public String detalharPaciente() {
+		
+		PacienteBusiness pacienteBusiness = new PacienteBusiness();
+		
+		paciente = pacienteBusiness.detalharPaciente(paciente.getCodPaciente());
+		
+		return "success";
+		}
+	
+	public String atualizarPaciente() {
+		
+			PacienteBusiness pacienteBusiness = new PacienteBusiness();
+		
+			pacienteBusiness.atualizarPaciente(paciente);
+		
+			return "success";
+	}
+	
+	
+	public String deletarPaciente() {
+		PacienteBusiness pacienteBusiness = new PacienteBusiness();
+		
+		return pacienteBusiness.deletarPaciente(paciente.getCodPaciente());
+	}
+	
+	//Navegação
+	public String navegarCadastroDePaciente() {
+		return "success";	
+	}
+
+	//Getters & Setters
+	
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	public List<Paciente> getListaPacientesForm() {
+		return listaPacientesForm;
+	}
+
+	public void setListaPacientesForm(List<Paciente> listaPacientesForm) {
+		this.listaPacientesForm = listaPacientesForm;
+	}
+	
+}

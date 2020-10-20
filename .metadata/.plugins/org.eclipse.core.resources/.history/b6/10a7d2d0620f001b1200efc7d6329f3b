@@ -1,0 +1,29 @@
+package model.bean;
+
+import java.util.Calendar;
+
+public class Exame {
+
+	private int id;
+	private int id_pcnt;
+	private String nm_exame;
+	private Calendar exm_data;
+	private String resultado;
+
+	public Exame() {
+		super();
+		
+	}
+
+	public Exame(int id, int id_pcnt, String nm_exame, Calendar exm_data, String resultado) {
+		super();
+		this.id = id;
+		this.id_pcnt = id_pcnt;
+		this.nm_exame = nm_exame;
+		this.exm_data = exm_data;
+		this.resultado = resultado;
+			
+	}
+
+	
+}

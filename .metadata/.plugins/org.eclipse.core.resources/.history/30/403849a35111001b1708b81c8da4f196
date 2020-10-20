@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+	<title>Soc Teste</title>
+</head>
+<body>
+
+	<%@ include file="navBar.jsp"%>
+	
+	<div class="container custon-transley">
+		<div class="row justify-content-center pb-5">
+			<h4>Dados do Paciente</h4>
+		</div>	    
+	  	<div class="row justify-content-center"> 
+	  		<div class="row justify-content-center">	  		
+		    <table class="table">
+			  <thead class="thead-light">
+			    <tr>
+			      <th>Id</th>
+			      <th>Paciente</th>
+			      
+			    </tr>
+			  </thead>
+			  
+				<tbody>
+				  <tr>				    
+					<td>Código:</td>
+					<td>${paciente.id}</td>							
+				  </tr>
+				  <tr>				    
+					<td>Código:</td>
+					<td>${paciente.id}</td>							
+				  </tr>
+				  <tr>				    
+					<td>Código:</td>
+					<td>${paciente.id}</td>							
+				  </tr>
+				</tbody>
+			 
+			</table>		
+	  	</div>		
+		    
+	  	</div>
+	</div>	
+</body>
+</html>

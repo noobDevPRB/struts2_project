@@ -1,0 +1,163 @@
+package model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.bean.Paciente;
+import conexao.FabricaDeConexao;
+
+public class PacienteDao {
+	
+	public String cadastrar(Paciente paciente) {
+		
+		Connection con=FabricaDeConexao.getConnection();
+		PreparedStatement stmt = null;
+		
+		String sql="INSERT INTO paciente (nm_cmplt, idade, genero) VALUES (?,?,?)";
+
+		try { 
+			int i = 1;
+			stmt = con.prepareStatement(sql);
+			stmt.setString(i++, paciente.getNm_cmplt());
+			stmt.setInt(i++, paciente.getIdade());
+			stmt.setString(i++, paciente.getGenero());
+			
+			stmt.executeUpdate();
+			
+			return "success";
+		}catch (SQLException e) {
+			System.err.println("Erro durante o registro"+e);
+			return "failure";
+		}finally {
+			FabricaDeConexao.closeConnection(con, stmt);
+		}
+	
+	}
+
+//	public List<Paciente> listarPacientes() {
+//		
+//		List<Paciente> listaDeExames = new ArrayList<Paciente>();
+//		Connection con = FabricaDeConexao.getConnection();
+//		PreparedStatement stmt = null;
+//		ResultSet rs = null;
+//		
+//		String sql="SELECT * FROM paciente";
+//	
+//		try {
+//			stmt = con.prepareStatement(sql);
+//			rs = stmt.executeQuery();
+//			
+//			while(rs.next()) {
+//				
+//				Paciente paciente = new Paciente();
+//				
+//				paciente.setCodPaciente(rs.getInt("cod_paciente"));
+//				paciente.setNmPaciente(rs.getString("nm_paciente"));
+//				paciente.setSbPaciente(rs.getString("sb_nm_paciente"));
+//				
+//				listaDeExames.add(paciente);
+//			}
+//			
+//		}catch(SQLException e){
+//			System.err.println("Erro"+ e);
+//			
+//		}finally {
+//			FabricaDeConexao.closeConnection(con, stmt ,rs);
+//		}
+//		return listaDeExames;
+//	}
+//
+//	public Paciente detalharPaciente(int codigo) {
+//		
+//		Paciente paciente = new Paciente();
+//		
+//		PreparedStatement stmt = null;
+//		ResultSet rs = null;		
+//		Connection con=FabricaDeConexao.getConnection();
+//		
+//		String sql="SELECT * FROM paciente WHERE cod_paciente =?";
+//		
+//		try {
+//			stmt = con.prepareStatement(sql);
+//			stmt.setInt(1, codigo);
+//			rs = stmt.executeQuery();
+//			
+//			if(rs.next()) {
+//				
+//				paciente = new Paciente();
+//				
+//				paciente.setCodPaciente(rs.getInt("cod_paciente"));
+//				paciente.setNmPaciente(rs.getString("nm_paciente"));
+//				paciente.setSbPaciente(rs.getString("sb_nm_paciente"));
+//				paciente.setSexo(rs.getString("sexo"));
+//				paciente.setDataNcmt(rs.getString("data_nasc"));
+//				paciente.setCodRg(rs.getInt("cod_rg"));
+//				
+//			}
+//			
+//			return paciente;
+//			
+//		}catch(SQLException e){
+//			System.err.println("Error"+e);		
+//		}finally {
+//			FabricaDeConexao.closeConnection(con, stmt ,rs);
+//		}	
+//		return paciente;
+//	}
+//
+//	public String atualizarPaciente(Paciente paciente) {
+//		
+//		PreparedStatement stmt = null;
+//		Connection con = FabricaDeConexao.getConnection();
+//		String sql = "UPDATE paciente SET nm_paciente=? , sb_nm_paciente=? , sexo=? , data_nasc=? , cod_rg=? WHERE cod_paciente=?";
+//	
+//		try {
+//			int i = 1; 
+//			stmt = con.prepareStatement(sql);
+//			stmt.setString(i++, paciente.getNmPaciente());
+//			stmt.setString(i++, paciente.getSbPaciente());
+//			stmt.setString(i++, paciente.getSexo());
+//			stmt.setString(i++, paciente.getDataNcmt());
+//			stmt.setInt(i++, paciente.getCodRg());
+//			
+//			
+//			stmt.setInt(i++, paciente.getCodPaciente());
+//	
+//			stmt.executeUpdate();
+//	
+//			return "success";
+//		} catch (SQLException e) {
+//			System.err.println("Error Durante o Update" + e);
+//			return "failure";
+//		} finally {
+//			FabricaDeConexao.closeConnection(con, stmt);
+//		}
+//	}
+//	
+//	public String deletarPaciente(int codigo) {
+//		
+//		PreparedStatement stmt = null;	
+//	
+//		Connection con = FabricaDeConexao.getConnection();
+//		
+//		String sql = "DELETE FROM paciente WHERE cod_paciente = ?";
+//		try {
+//			stmt = con.prepareStatement(sql);
+//			stmt.setInt(1, codigo);
+//			stmt.executeUpdate();
+//			
+//			return "success";	
+//		} catch (SQLException e) {
+//			System.err.println(e);
+//			return "failure";
+//		} finally {
+//			FabricaDeConexao.closeConnection(con, stmt);
+//		}
+//	}
+
+}
+

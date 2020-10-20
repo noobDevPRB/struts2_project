@@ -1,0 +1,43 @@
+package model.business;
+
+import model.dao.ExameDao;
+
+import java.util.List;
+
+import model.bean.Exame;
+
+public class ExameBusiness {
+	
+	public String cadastrar(Exame exame) {
+		java.sql.Date dataExame = new java.sql.Date(exame.getExm_data().getTime());	
+		java.sql.Date dataAgora = new java.sql.Date(System.currentTimeMillis());
+		
+		if( dataExame.compareTo(dataAgora) > 0 ) {
+			ExameDao exameDao = new ExameDao();
+			return exameDao.cadastrar(exame);
+		}else {
+			return "failure";
+		}
+	}
+
+	public List<Exame> listar() {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.listar();
+	}
+
+	public Exame detalhar(int id_exame) {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.detalhar(id_exame);
+	}
+
+	public String atualizar(Exame exame) {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.atualizar(exame);
+	}
+
+	public String deletar(int id_exame) {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.deletar(id_exame);
+	}
+	
+}

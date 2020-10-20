@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline:0;
+	max-width: 100%;
+}
+
+html, body {
+	min-height:100%;
+	height:100%;
+	max-width:100%
+}
+
+.custon-transley{
+	position: relative;
+	top: 50%;
+	transform: translateY(-65%);
+}
+
+.custon-table {
+	height: 700px;
+	overflow: auto;
+}
+
+.botão-transparente{
+	color: #007bff;;
+	background-color: transparent!important;
+	border: 0px!important;
+	border-sizing: none!important;
+}
+
+.botão-transparente:hover{
+	background-color: transparent!important;
+	border: 0px!important;
+	color: #0056b3;
+    text-decoration: underline;
+}

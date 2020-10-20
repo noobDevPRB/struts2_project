@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Soc Teste</title>
+</head>
+<link rel="stylesheet" href="https://unpkg.com/browse/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand pl-5 ml-5" href="http://localhost:8080/Projeto_SOCTest/">Home</a>
+	
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto pr-5 mr-5">  
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Paciente
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/navegarCadastroPaciente">Cadastro</a>
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/listarPaciente">Listagem</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Exame
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/cadastrarExames">Cadastro</a>
+						<a class="dropdown-item" href="http://localhost:8080/Projeto_SOCTest/listarExames">Listagem</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</body>
+</html>

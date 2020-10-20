@@ -1,0 +1,43 @@
+package model.business;
+
+import model.dao.ExameDao;
+import model.bean.Exame;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+public class ExameBusiness {
+	
+	public String cadastrar(Exame exame) {
+		System.out.println(exame.getExm_data());
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		Date dateobj = new Date();
+		System.out.println(df.format(dateobj));
+		
+		ExameDao exameDao = new ExameDao();
+		return exameDao.cadastrar(exame);
+	}
+
+	public List<Exame> listar() {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.listar();
+	}
+
+	public Exame detalhar(int id_exame) {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.detalhar(id_exame);
+	}
+
+	public String atualizar(Exame exame) {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.atualizar(exame);
+	}
+
+	public String deletar(int id_exame) {
+		ExameDao exameDao = new ExameDao();
+		return exameDao.deletar(id_exame);
+	}
+	
+}

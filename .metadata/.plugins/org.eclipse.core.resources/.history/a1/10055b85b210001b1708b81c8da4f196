@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline:0;
+	max-width: 100%;
+}
+
+html, body {
+	min-height:100%;
+	height:100%;
+	max-width:100%
+}
+
+.custon-transley{
+	position:relative;
+	top:50%;
+	transform: transleyY(-25%);
+}

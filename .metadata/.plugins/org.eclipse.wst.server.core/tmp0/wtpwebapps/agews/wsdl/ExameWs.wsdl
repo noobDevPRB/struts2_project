@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://agews" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://agews" xmlns:intf="http://agews" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://agews" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="consultaPorId">
+    <complexType>
+     <sequence>
+      <element name="paramId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="consultaPorIdResponse">
+    <complexType>
+     <sequence>
+      <element name="consultaPorIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="consultaPorIdRequest">
+
+      <wsdl:part element="impl:consultaPorId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="consultaPorIdResponse">
+
+      <wsdl:part element="impl:consultaPorIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ExameWs">
+
+      <wsdl:operation name="consultaPorId">
+
+         <wsdl:input message="impl:consultaPorIdRequest" name="consultaPorIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:consultaPorIdResponse" name="consultaPorIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ExameWsSoapBinding" type="impl:ExameWs">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="consultaPorId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="consultaPorIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="consultaPorIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ExameWsService">
+
+      <wsdl:port binding="impl:ExameWsSoapBinding" name="ExameWs">
+
+         <wsdlsoap:address location="http://localhost:8080/agews/services/ExameWs"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

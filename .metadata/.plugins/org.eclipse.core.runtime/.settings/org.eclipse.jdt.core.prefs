@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/Users/bruno/eclipse/jee-2020-09/eclipse/
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Users/bruno/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/bruno/.p2/pool/plugins/org.junit_4.13.0.v20200204-1500.jar
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/bruno/.m2/repository
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=14
+org.eclipse.jdt.core.compiler.compliance=14
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.release=enabled
+org.eclipse.jdt.core.compiler.source=14
+org.eclipse.jdt.core.userLibrary.struts2=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/commons-fileupload-1.4.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/commons-io-2.6.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/commons-lang-2.4.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/commons-lang3-3.8.1.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/commons-logging-1.2.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/freemarker-2.3.28.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/javassist-3.20.0-GA.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/log4j-api-2.12.1.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/ognl-3.1.26.jar"/>\r\n\t<archive path\="C\:/Users/bruno/Desktop/struts2/struts2-core-2.5.22.jar"/>\r\n</userlibrary>\r\n
